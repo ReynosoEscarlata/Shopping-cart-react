@@ -5,3 +5,17 @@
     color:#111111;
 }
 
+
+.carrusel{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height:50%;
+}
+.cards{
+    margin:2em;
+    display:flex;
+}
+.card-img-top{
+    min-height: 16em;
+    
+}
