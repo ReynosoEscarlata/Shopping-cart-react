@@ -1,0 +1,34 @@
+[
+    {   
+        "Id":1,
+        "Nombre":"Tennis Nike",
+        "Precio":"$ 1500 Mx",
+        "Descripcion":"Tennis Nike desportivos de color negro, edicion limitada",
+        "Stock":100,
+        "Img":"nike_negros.jpg"
+    },
+    {
+        "Id":2,
+        "Nombre":"Xbox Series S",
+        "Precio":"$ 12,999 Mx",
+        "Descripcion":"Consola de Microsoft Xobx Series S de 1 TBB",
+        "Stock":2,
+        "Img":"xbox2.jpg"
+    },
+    {
+        "Id":3,
+        "Nombre":"Funko Pop Iron Man",
+        "Precio":"$ 400 Mx",
+        "Descripcion":"Funko del personaje de Marvel Iron Man en la Pelicula Avengers",
+        "Stock":4,
+        "Img":"funko_rion.jpg"
+    },
+    {
+        "Id":4,
+        "Nombre":"Iphone 13",
+        "Precio":"$ 29,999 Mx",
+        "Descripcion":"Celular utlimo modelo de la Marca Apple Iphones 13",
+        "Stock":16,
+        "Img":"iphone.jpg"
+    }
+]
