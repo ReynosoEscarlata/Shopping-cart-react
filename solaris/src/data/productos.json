@@ -5,7 +5,9 @@
         "Precio":"$ 1500 Mx",
         "Descripcion":"Tennis Nike desportivos de color negro, edicion limitada",
         "Stock":100,
-        "Img":"nike_negros.jpg"
+        "Img":"nike_negros.jpg",
+        "Popularity":95,
+        "Votes":100
     },
     {
         "Id":2,
@@ -13,7 +15,9 @@
         "Precio":"$ 12,999 Mx",
         "Descripcion":"Consola de Microsoft Xobx Series S de 1 TBB",
         "Stock":2,
-        "Img":"xbox2.jpg"
+        "Img":"xbox2.jpg",
+        "Popularity":89,
+        "Votes":25
     },
     {
         "Id":3,
@@ -21,7 +25,9 @@
         "Precio":"$ 400 Mx",
         "Descripcion":"Funko del personaje de Marvel Iron Man en la Pelicula Avengers",
         "Stock":4,
-        "Img":"funko_rion.jpg"
+        "Img":"funko_rion.jpg",
+        "Popularity":60,
+        "Votes":7
     },
     {
         "Id":4,
@@ -29,6 +35,8 @@
         "Precio":"$ 29,999 Mx",
         "Descripcion":"Celular utlimo modelo de la Marca Apple Iphones 13",
         "Stock":16,
-        "Img":"iphone.jpg"
+        "Img":"iphone.jpg",
+        "Popularity":98,
+        "Votes":22
     }
 ]
