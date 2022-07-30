@@ -1,3 +1,6 @@
+.text-ellipsis{
+    text-overflow: ellipsis;
+}
 .navbar {
     width: 100vw;
 }
@@ -6,10 +9,17 @@
     color: #111111;
 }
 
-.carrusel {
+.car-cat {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-height: 50%;
+    max-height: 22em;
+}
+.carousel-size{
+    max-height: 22em;
+}
+
+.img-carousel{
+    max-height: 22em;
 }
 
 .cards {

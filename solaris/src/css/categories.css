@@ -1,0 +1,7 @@
+.categorie{
+    color:#000000
+}
+.categorie:hover{
+    background: #000000;
+    color: #ffff;
+}

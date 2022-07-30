@@ -9,38 +9,27 @@ export default function ControlledCarousel() {
   };
 
   return (
-    <Carousel className="carousel-dark slide" activeIndex={index} onSelect={handleSelect}>
+    <Carousel className="carousel-dark slide carousel-size" activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-50 img-fluid"
+          className="d-block w-100 img-carousel"
           src={require('../../img/xbox.jpg')}
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>Xbox Series S</h3>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-50 img-fluid"
+          className="d-block w-100 img-carousel"
           src={require('../../img/Nike.jpg')}
           alt="Second slide"
         />
-
-        <Carousel.Caption>
-          <h3>Tennis Nike</h3>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-50 img-fluid"
+          className="d-block w-100 img-carousel"
           src={require('../../img/tv.jpg')}
           alt="Third slide"
         />
-
-        <Carousel.Caption>
-          <h3>Tv</h3>
-        </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );

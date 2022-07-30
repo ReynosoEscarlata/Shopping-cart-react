@@ -1,9 +1,7 @@
 import React from 'react'
-// RECURSOS
-import logo from '../img/logo zero.png'
-
+import { Link } from "react-router-dom";
 //COMPONENTES
-    //bootstrap 
+//bootstrap 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -12,7 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-    //Personales 
+//Personales 
 import Cart from './Style-Components/cart'
 
 
@@ -23,7 +21,12 @@ export default function NavBar() {
                 <Container className="d-block mx-1" fluid>
                     <Row className="g-2">
                         <Col md>
-                            <Navbar.Brand href="/"><img src={require('../img/logo zero.png')} style={{ height: '50px' }} /> Solaris</Navbar.Brand>
+                        <Link to={`/`} className="text-decoration-none">
+                            <Navbar.Brand>
+                                <img src={require('../img/logo zero.png')} style={{ height: '50px' }} /> 
+                                Solaris
+                            </Navbar.Brand>
+                        </Link>
                         </Col>
                         <Col md>
                             <Form className="d-flex">

@@ -1,8 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { useState } from 'react'
-import ItemDetail from '../Item-details/itemDetail'
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 
 export default function Item(props) {
     const [carrito, setCarrito] = useState(0);
@@ -27,7 +25,7 @@ export default function Item(props) {
                 <a href={`#${props.Id}`}><img src={require(`../../img/${props.Img}`)} className="card-img-top" alt="..." /></a>
                 <div className="card-body text-center m-2">
                     <h5 className="card-title">{props.Nombre}</h5>
-                    <p className="card-text">{props.Descripcion}</p>
+                    <p className="card-text text-ellipsis">{props.Descripcion}</p>
                     <label className="disabled">{props.Stock} disponibles</label>
                     <div className="d-flex justify-content-between">
                         <p>{props.Precio}</p>
@@ -38,19 +36,19 @@ export default function Item(props) {
                         </div>
                     </div>
                     <div className="d-flex mt-2 justify-content-between">
-                        <button type="button" className="btn btn-outline-primary" onClick={() => handleShow()}>Ver</button>
+                        <button type="button" className="btn btn-outline-primary"><Link to={`/item/${props.Id}`}>Ver</Link></button>
                         <button type="button" className="btn btn-outline-primary">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
-            <Modal show={show} onHide={handleClose} className=" modal-xl p-0">
+            {/* <Modal show={show} onHide={handleClose} className=" modal-xl p-0">
                 <ItemDetail className="mt-0" id={props.Id}/>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Cerrar
                     </Button>
                 </Modal.Footer>
-            </Modal>
+            </Modal> */}
         </>
     )
 }

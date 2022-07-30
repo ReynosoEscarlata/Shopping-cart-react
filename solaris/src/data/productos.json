@@ -7,7 +7,8 @@
         "Stock":100,
         "Img":"nike_negros.jpg",
         "Popularity":95,
-        "Votes":100
+        "Votes":100,
+        "Category":5
     },
     {
         "Id":2,
@@ -17,7 +18,8 @@
         "Stock":2,
         "Img":"xbox2.jpg",
         "Popularity":89,
-        "Votes":25
+        "Votes":25,
+        "Category":1
     },
     {
         "Id":3,
@@ -27,7 +29,8 @@
         "Stock":4,
         "Img":"funko_rion.jpg",
         "Popularity":60,
-        "Votes":7
+        "Votes":7,
+        "Category":1
     },
     {
         "Id":4,
@@ -37,6 +40,95 @@
         "Stock":16,
         "Img":"iphone.jpg",
         "Popularity":98,
-        "Votes":22
+        "Votes":22,
+        "Category":3
+    },
+    {   
+        "Id":5,
+        "Nombre":"SNKRS Nike",
+        "Precio":"$ 12500 Mx",
+        "Descripcion":"Tennis Nike SNKRS color rojo, modelo 1",
+        "Stock":48,
+        "Img":"sneakers.jpg",
+        "Popularity":91,
+        "Votes":80,
+        "Category":5
+    },
+    {
+        "Id":6,
+        "Nombre":"TESLA modelo S",
+        "Precio":"$ 500,800 Mx",
+        "Descripcion":"Con hasta 652 kilómetros de autonomía estimada",
+        "Stock":6,
+        "Img":"tesla.jpg",
+        "Popularity":94,
+        "Votes":8,
+        "Category":2
+    },
+    {
+        "Id":7,
+        "Nombre":"Outfit aesthetic",
+        "Precio":"$ 699 Mx",
+        "Descripcion":"Conjunto de ropa para cabellero, tela 100% algodon",
+        "Stock":72,
+        "Img":"outfit.jpg",
+        "Popularity":60,
+        "Votes":38,
+        "Category":4
+    },
+    {
+        "Id":8,
+        "Nombre":"Laptop Dell AlienWare",
+        "Precio":"$ 32,999 Mx",
+        "Descripcion":"Computadora Gamer con 1TB en estado solido",
+        "Stock":38,
+        "Img":"alienware.jfif",
+        "Popularity":90,
+        "Votes":22,
+        "Category":6
+    },
+    {   
+        "Id":9,
+        "Nombre":"Xiaomi Poco f4 Gt",
+        "Precio":"$ 12,999 Mx",
+        "Descripcion":"Celular Poco F4 Gt con gatillos magneticos",
+        "Stock":150,
+        "Img":"f4gt.jpeg",
+        "Popularity":95,
+        "Votes":78,
+        "Category":3
+    },
+    {
+        "Id":10,
+        "Nombre":"Laptop Lenovo Gaming",
+        "Precio":"$ 18,999 Mx",
+        "Descripcion":"Computadora Portatil Lenovo Gaming Procesador de 11 generacion",
+        "Stock":37,
+        "Img":"lenovo.jpg",
+        "Popularity":79,
+        "Votes":49,
+        "Category":6
+    },
+    {
+        "Id":11,
+        "Nombre":"Volkswagen Golf 2020",
+        "Precio":"$ 300,000 Mx",
+        "Descripcion":"Auto nuevo modelo, directo de agencia",
+        "Stock":8,
+        "Img":"golf.jfif",
+        "Popularity":80,
+        "Votes":7,
+        "Category":2
+    },
+    {
+        "Id":12,
+        "Nombre":"Vestido para el verano",
+        "Precio":"$ 679 Mx",
+        "Descripcion":"Vestido liso para el verano color rojo",
+        "Stock":54,
+        "Img":"vestido.jpg",
+        "Popularity":91,
+        "Votes":49,
+        "Category":4
     }
 ]
