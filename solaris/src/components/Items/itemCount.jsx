@@ -25,13 +25,14 @@ export default function ItemCount(props) {
         <>
             <div className="d-flex justify-content-between">
                 <p>{props.Precio}</p>
+
+            </div>
+            <div className="d-flex mt-2 justify-content-between">
                 <div className="btn-group" role="group">
                     <button type="button" className="btn btn-outline-primary" onClick={() => substract_item(props.Stock)}>-</button>
                     <label className="btn">{carrito}</label>
                     <button type="button" className="btn btn-outline-primary" onClick={() => add_item(props.Stock)}>+</button>
                 </div>
-            </div>
-            <div className="d-flex mt-2 justify-content-between">
                 <button type="button" className="btn btn-outline-primary" onClick={() => add_cart()}>Agregar al carrito</button>
             </div>
         </>
