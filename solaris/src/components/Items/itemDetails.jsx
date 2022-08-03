@@ -2,9 +2,11 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import NavBar from '../navBar';
+import ItemCount from './itemCount'
 export default function ItemDetails() {
     const { id } = useParams();
     const [product, setProduct] = useState({});
+    const [count,setCount] = useState(0)
     const [img, setImg] = useState('descarga.png');
     const stars = [];
     const products_json = new Promise((resolve, reject) => {
@@ -67,8 +69,7 @@ export default function ItemDetails() {
                                 </h5>
                                 <h6 className="stock">Stock: {product.Stock}</h6>
                                 <div className="action">
-                                    <button className="add-to-cart btn btn-default" type="button">Agregar al Carrito</button>
-                                    <button className="like btn btn-default" type="button"><span className="fa fa-heart"></span></button>
+                                    <ItemCount Stock={product.Stock} Id={id}/>
                                 </div>
                             </div>
                         </div>
