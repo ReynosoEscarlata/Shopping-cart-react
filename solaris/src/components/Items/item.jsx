@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { useState } from 'react'
 import ItemCount from './itemCount'
+import {CartContext} from '../../contexts/cartContext';
+
 
 export default function Item(props) {
     return (

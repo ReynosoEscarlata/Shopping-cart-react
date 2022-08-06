@@ -31,6 +31,7 @@ export default function Products() {
                         Precio={product.Precio}
                         Stock = {product.Stock}
                         Accion={index}
+                        key={index}
                     />
                 )
                 })

@@ -5,6 +5,7 @@ import Carousel from './Style-Components/carousel'
 import Categories from './Style-Components/categories'
 
 
+
 export default function Home() {
     return (
         <>

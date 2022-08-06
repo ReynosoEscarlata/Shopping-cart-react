@@ -40,6 +40,7 @@ export default function ItemsCategories() {
               Precio={product.Precio}
               Stock={product.Stock}
               Accion={index}
+              key={index}
             />
           )
         })}

@@ -1,8 +1,9 @@
-import React from 'react'
+import {React,  useContext, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from 'react'
+import {CartContext} from '../../contexts/cartContext';
 
 export default function ItemCount(props) {
+    const cartContent  = useContext(CartContext);
     const nav = useNavigate()
     const [carrito, setCarrito] = useState(0);
     const add_item = (stock) => {
@@ -15,17 +16,14 @@ export default function ItemCount(props) {
             setCarrito(carrito - 1);
         }
     }
-    const add_cart = () => {
-        const message = `Agregaste ${carrito} producto`;
-        //   Utilizo un condicional ternario (condicional) ? (true) : (false)
-        carrito === 1 ? alert(message) : alert(`${message}s`);
+    const add_cart = (quantity) => {
+        cartContent.addToCart(props.Item,quantity);
         nav('/cart');
     }
     return (
         <>
             <div className="d-flex justify-content-between">
                 <p>{props.Precio}</p>
-
             </div>
             <div className="d-flex mt-2 justify-content-between">
                 <div className="btn-group" role="group">
@@ -33,7 +31,7 @@ export default function ItemCount(props) {
                     <label className="btn">{carrito}</label>
                     <button type="button" className="btn btn-outline-primary" onClick={() => add_item(props.Stock)}>+</button>
                 </div>
-                <button type="button" className="btn btn-outline-primary" onClick={() => add_cart()}>Agregar al carrito</button>
+                <button type="button" className="btn btn-outline-primary" onClick={() => add_cart(carrito)}>Agregar al carrito</button>
             </div>
         </>
     )

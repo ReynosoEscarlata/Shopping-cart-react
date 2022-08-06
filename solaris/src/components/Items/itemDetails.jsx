@@ -69,7 +69,7 @@ export default function ItemDetails() {
                                 </h5>
                                 <h6 className="stock">Stock: {product.Stock}</h6>
                                 <div className="action">
-                                    <ItemCount Stock={product.Stock} Id={id}/>
+                                    <ItemCount Stock={product.Stock} Item={product} Id={id}/>
                                 </div>
                             </div>
                         </div>

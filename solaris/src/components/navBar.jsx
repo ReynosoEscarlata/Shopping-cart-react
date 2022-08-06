@@ -1,5 +1,7 @@
-import React from 'react'
+import {React,  useContext, useEffect } from 'react'
 import { Link } from "react-router-dom";
+//CONTEXT
+import {CartContext} from '../contexts/cartContext';
 //COMPONENTES
 //bootstrap 
 import Button from 'react-bootstrap/Button';
@@ -15,6 +17,7 @@ import Cart from './Style-Components/cart'
 
 
 export default function NavBar() {
+    const cartContent  = useContext(CartContext);
     return (
         <>
             <Navbar bg="light" className="navbar" expand="xl" >
@@ -69,7 +72,7 @@ export default function NavBar() {
                         </Col>
                         <Col lg>
                             <Nav className="justify-content-end me-2">
-                                <Cart/>
+                                <Cart cant={cartContent.cantInCart}/>
                             </Nav>
                         </Col>
                     </Row>
