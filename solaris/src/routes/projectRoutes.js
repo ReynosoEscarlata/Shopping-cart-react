@@ -16,7 +16,7 @@ export default function ProjectRoutes() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/item/:id" element={<ItemDetails />} />
           <Route exact path="/categories/:id" element={<ItemsCategories />} />
-          <Route exact path="/cart/" element={<Cart />} />
+          <Route exact path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

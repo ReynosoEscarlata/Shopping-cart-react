@@ -2,7 +2,7 @@
     {   
         "Id":1,
         "Nombre":"Tennis Nike",
-        "Precio":"$ 1500 Mx",
+        "Precio": 1500 ,
         "Descripcion":"Tennis Nike desportivos de color negro, edicion limitada",
         "Stock":100,
         "Img":"nike_negros.jpg",
@@ -13,7 +13,7 @@
     {
         "Id":2,
         "Nombre":"Xbox Series S",
-        "Precio":"$ 12,999 Mx",
+        "Precio": 12999 ,
         "Descripcion":"Consola de Microsoft Xobx Series S de 1 TBB",
         "Stock":2,
         "Img":"xbox2.jpg",
@@ -24,7 +24,7 @@
     {
         "Id":3,
         "Nombre":"Funko Pop Iron Man",
-        "Precio":"$ 400 Mx",
+        "Precio": 400 ,
         "Descripcion":"Funko del personaje de Marvel Iron Man en la Pelicula Avengers",
         "Stock":4,
         "Img":"funko_rion.jpg",
@@ -35,7 +35,7 @@
     {
         "Id":4,
         "Nombre":"Iphone 13",
-        "Precio":"$ 29,999 Mx",
+        "Precio": 29999 ,
         "Descripcion":"Celular utlimo modelo de la Marca Apple Iphones 13",
         "Stock":16,
         "Img":"iphone.jpg",
@@ -46,7 +46,7 @@
     {   
         "Id":5,
         "Nombre":"SNKRS Nike",
-        "Precio":"$ 12500 Mx",
+        "Precio": 12500 ,
         "Descripcion":"Tennis Nike SNKRS color rojo, modelo 1",
         "Stock":48,
         "Img":"sneakers.jpg",
@@ -57,7 +57,7 @@
     {
         "Id":6,
         "Nombre":"TESLA modelo S",
-        "Precio":"$ 500,800 Mx",
+        "Precio": 500800 ,
         "Descripcion":"Con hasta 652 kilómetros de autonomía estimada",
         "Stock":6,
         "Img":"tesla.jpg",
@@ -68,7 +68,7 @@
     {
         "Id":7,
         "Nombre":"Outfit aesthetic",
-        "Precio":"$ 699 Mx",
+        "Precio": 699 ,
         "Descripcion":"Conjunto de ropa para cabellero, tela 100% algodon",
         "Stock":72,
         "Img":"outfit.jpg",
@@ -79,7 +79,7 @@
     {
         "Id":8,
         "Nombre":"Laptop Dell AlienWare",
-        "Precio":"$ 32,999 Mx",
+        "Precio": 32999 ,
         "Descripcion":"Computadora Gamer con 1TB en estado solido",
         "Stock":38,
         "Img":"alienware.jfif",
@@ -90,7 +90,7 @@
     {   
         "Id":9,
         "Nombre":"Xiaomi Poco f4 Gt",
-        "Precio":"$ 12,999 Mx",
+        "Precio": 12999 ,
         "Descripcion":"Celular Poco F4 Gt con gatillos magneticos",
         "Stock":150,
         "Img":"f4gt.jpeg",
@@ -101,7 +101,7 @@
     {
         "Id":10,
         "Nombre":"Laptop Lenovo Gaming",
-        "Precio":"$ 18,999 Mx",
+        "Precio": 18999 ,
         "Descripcion":"Computadora Portatil Lenovo Gaming Procesador de 11 generacion",
         "Stock":37,
         "Img":"lenovo.jpg",
@@ -112,7 +112,7 @@
     {
         "Id":11,
         "Nombre":"Volkswagen Golf 2020",
-        "Precio":"$ 300,000 Mx",
+        "Precio": 300000 ,
         "Descripcion":"Auto nuevo modelo, directo de agencia",
         "Stock":8,
         "Img":"golf.jfif",
@@ -123,7 +123,7 @@
     {
         "Id":12,
         "Nombre":"Vestido para el verano",
-        "Precio":"$ 679 Mx",
+        "Precio": 679 ,
         "Descripcion":"Vestido liso para el verano color rojo",
         "Stock":54,
         "Img":"vestido.jpg",

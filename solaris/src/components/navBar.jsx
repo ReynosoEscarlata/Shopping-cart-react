@@ -72,7 +72,7 @@ export default function NavBar() {
                         </Col>
                         <Col lg>
                             <Nav className="justify-content-end me-2">
-                                <Cart cant={cartContent.cantInCart}/>
+                                <Cart cant={cartContent.cart.length}/>
                             </Nav>
                         </Col>
                     </Row>

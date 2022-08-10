@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  
 import '../../css/categories.css';
 
 export default function Categories() {
+    
     return (
         <div className="categories mx-2 p-1 h-50">
             <div className="row m-0 p-0">

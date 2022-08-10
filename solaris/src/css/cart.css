@@ -1,0 +1,19 @@
+.container {
+}
+
+.card-image{
+    max-width: 540px;
+}
+.btn{
+    color: #000000 !important;
+}
+.btn-outline-primary{
+    border: 1px solid #000000 !important;
+}
+.btn:hover{
+    color: #ffffff !important;
+    background-color: #000000 !important;
+}
+.btn-outline-primary:hover{
+    border: 1px solid #ffffff !important;
+}
