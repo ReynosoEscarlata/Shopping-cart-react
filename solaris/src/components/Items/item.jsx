@@ -19,14 +19,6 @@ export default function Item(props) {
                     </div>
                 </div>
             </div>
-            {/* <Modal show={show} onHide={handleClose} className=" modal-xl p-0">
-                <ItemDetail className="mt-0" id={props.Id}/>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Cerrar
-                    </Button>
-                </Modal.Footer>
-            </Modal> */}
         </>
     )
 }

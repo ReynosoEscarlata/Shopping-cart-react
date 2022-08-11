@@ -3,26 +3,19 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import NavBar from '../navBar';
 import Item from './item'
+import { db } from '../../db/connection';
+import { getFirestore, doc, getDocs, collection, onSnapshot, query, setProducts, snapshot, where } from 'firebase/firestore';
 
 export default function ItemsCategories() {
   const { id } = useParams();
-  const [products, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
   const stars = [];
-  const products_json = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const jsonData = require('../../data/productos.json');
-      const arrayProducts = [];
-      jsonData.forEach((data) => {
-        if (data.Category == id) {
-          arrayProducts.push(data);
-        }
-      })
-      resolve(arrayProducts);
-    }, 1000)
-  })
   useEffect(() => {
-    products_json.then(data => {
-      setProduct(data);
+    console.log(typeof(id));
+    const query_products = query(collection(db,"items"), where("Category", "==", parseInt(id)));
+    getDocs(query_products).then((records) => {
+      console.log(records.docs);
+      setProducts(records.docs.map((record) => ({ 'Id': record.id, ...record.data() })));
     })
   }, [])
   return (
@@ -30,22 +23,22 @@ export default function ItemsCategories() {
       <NavBar />
       <div className="cards container mt-0">
         <div className="row">
-        {products.map((product, index) => {
-          return (
-            <Item
-              Id={product.Id}
-              Img={product.Img}
-              Nombre={product.Nombre}
-              Descripcion={product.Descripcion}
-              Precio={product.Precio}
-              Stock={product.Stock}
-              Accion={index}
-              key={index}
-            />
-          )
-        })}
+          {products.map((product, index) => {
+            return (
+              <Item
+                Id={product.Id}
+                Img={product.Img}
+                Nombre={product.Nombre}
+                Descripcion={product.Descripcion}
+                Precio={product.Precio}
+                Stock={product.Stock}
+                Accion={index}
+                key={index}
+              />
+            )
+          })}
+        </div>
       </div>
-    </div>
-  </>
+    </>
   )
 }

@@ -3,26 +3,19 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import NavBar from '../navBar';
 import ItemCount from './itemCount'
+import { db } from '../../db/connection';
+import { getFirestore, doc, getDoc, collection, onSnapshot, query, setProducts, snapshot } from 'firebase/firestore';
 export default function ItemDetails() {
     const { id } = useParams();
     const [product, setProduct] = useState({});
-    const [count,setCount] = useState(0)
+    const [count, setCount] = useState(0)
     const [img, setImg] = useState('descarga.png');
     const stars = [];
-    const products_json = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const jsonData = require('../../data/productos.json');
-            jsonData.forEach((data) => {
-                if (data.Id == id) {
-                    resolve(data);
-                }
-            })
-        }, 1000)
-    })
     useEffect(() => {
-        products_json.then(data => {
-            setProduct(data);
-            setImg(data.Img);
+        const query = doc(db, "items", id);
+        getDoc(query).then((record) => {
+            setProduct({ 'Id': record.id, ...record.data() });
+            setImg(record.data().Img);
         })
     }, [])
     return (
@@ -69,7 +62,7 @@ export default function ItemDetails() {
                                 </h5>
                                 <h6 className="stock">Stock: {product.Stock}</h6>
                                 <div className="action">
-                                    <ItemCount Stock={product.Stock} Item={product} Id={id}/>
+                                    <ItemCount Stock={product.Stock} Item={product} Id={id} />
                                 </div>
                             </div>
                         </div>
