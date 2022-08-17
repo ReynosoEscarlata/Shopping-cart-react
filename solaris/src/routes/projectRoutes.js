@@ -4,6 +4,7 @@ import Home from '../components/home';
 import ItemDetails from '../components/Items/itemDetails';
 import ItemsCategories from '../components/Items/itemsCategories';
 import Cart from '../components/Cart/cart';
+import Orders from '../components/Orders/orders';
 import CartProvider from '../contexts/cartContext'
 
 import NavBar from '../components/navBar';
@@ -17,6 +18,7 @@ export default function ProjectRoutes() {
           <Route exact path="/item/:id" element={<ItemDetails />} />
           <Route exact path="/categories/:id" element={<ItemsCategories />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/orders" element={<Orders />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

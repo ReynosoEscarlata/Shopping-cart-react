@@ -56,7 +56,7 @@ export default function NavBar() {
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav className=" my-2 my-lg-0 justify-content-end" style={{ maxHeight: '100px', minWidth: '100%' }} navbarScroll>
                                     <NavDropdown title="Usuario" id="navbarScrollingDropdown">
-                                        <NavDropdown.Item href="#compras">
+                                        <NavDropdown.Item href="/orders">
                                             Compras
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />

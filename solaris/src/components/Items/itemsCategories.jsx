@@ -11,10 +11,8 @@ export default function ItemsCategories() {
   const [products, setProducts] = useState([]);
   const stars = [];
   useEffect(() => {
-    console.log(typeof(id));
     const query_products = query(collection(db,"items"), where("Category", "==", parseInt(id)));
     getDocs(query_products).then((records) => {
-      console.log(records.docs);
       setProducts(records.docs.map((record) => ({ 'Id': record.id, ...record.data() })));
     })
   }, [])
