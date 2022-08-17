@@ -12,7 +12,6 @@ import '../../css/cart.css';
 
 export default function Cart() {
 
-  const USER_INFO = { name: "Ricardo", phone: 72737273, email: "ask@hotmail.com" };
   const cartContent = useContext(CartContext);
   const [total, setTotal] = useState(0);
 
@@ -32,7 +31,7 @@ export default function Cart() {
     e.preventDefault();
     let verify_info = verify_user(e.target);
     if (verify_info === true){
-      let buyer = USER_INFO;
+      let buyer = { name: e.target.name.value, phone: e.target.phone.value, email: e.target.email.value};
       const order = {
         buyer: buyer,
         items: cartContent.cart,
