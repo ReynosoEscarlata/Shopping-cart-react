@@ -1,6 +1,6 @@
-import { React, useContext, useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import { db } from '../../db/connection';
-import { getFirestore, doc, getDocs, collection, onSnapshot, query, setProducts, snapshot } from 'firebase/firestore';
+import { getDocs, collection } from 'firebase/firestore';
 import NavBar from '../navBar';
 
 export default function Orders() {

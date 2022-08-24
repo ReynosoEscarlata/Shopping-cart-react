@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { db } from '../../db/connection';
-import { getFirestore, doc, getDocs, collection, onSnapshot, query, setProducts, snapshot } from 'firebase/firestore';
+import { getDocs, collection } from 'firebase/firestore';
 import Item from './item';
 
 export default function Products() {
@@ -14,7 +14,8 @@ export default function Products() {
     }, [])
     return (
         <>
-            <div className="cards container mt-0">
+        <div className="ms-0">
+            <div className="cards" >
                 <div className="row">
                     {products.map((product, index) => {
                         return (
@@ -23,6 +24,8 @@ export default function Products() {
                                 Img={product.Img}
                                 Nombre={product.Nombre}
                                 Descripcion={product.Descripcion}
+                                Popularity={product.Popularity}
+                                Votes={product.Votes}
                                 Precio={product.Precio}
                                 Stock={product.Stock}
                                 Accion={index}
@@ -33,6 +36,7 @@ export default function Products() {
                     }
                 </div>
             </div>
+        </div>
 
         </>
     )

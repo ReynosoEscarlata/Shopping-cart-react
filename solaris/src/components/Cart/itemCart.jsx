@@ -1,10 +1,5 @@
-import {React,  useContext, useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
-import { CartContext } from '../../contexts/cartContext';
+import {React, useState } from 'react';
 export default function ItemCart(props) {
-    const nav = useNavigate()
-    const cartContent = useContext(CartContext);
-    const [x,setX]=useState(cartContent);
     const [carrito, setCarrito] = useState(props.Item.quantity);
     //FUNCTIONS 
     const add_item = (quantity) => {
@@ -22,7 +17,7 @@ export default function ItemCart(props) {
         <div className="card mb-3">
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={require(`../../img/${props.Item.Img}`)} className="img-fluid rounded-start card-image" alt="..." />
+                    <img src={props.Item.Img} className="img-fluid rounded-start card-image" alt="..." />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">

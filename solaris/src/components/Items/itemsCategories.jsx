@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import NavBar from '../navBar';
 import Item from './item'
 import { db } from '../../db/connection';
-import { getFirestore, doc, getDocs, collection, onSnapshot, query, setProducts, snapshot, where } from 'firebase/firestore';
+import { getDocs, collection, query, where } from 'firebase/firestore';
 
 export default function ItemsCategories() {
   const { id } = useParams();

@@ -8,6 +8,9 @@
 .icon-black {
     color: #111111;
 }
+.color-black{
+    color: #111111;
+}
 
 .car-cat {
     display: grid;
@@ -29,6 +32,7 @@
 
 .card-img-top {
     min-height: 16em;
+    padding: 0;
 
 }
 
@@ -256,4 +260,11 @@ body {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+}
+
+.link-color{
+    color:#000000;
+}
+.link-color:hover{
+    color:#ffffff;
 }

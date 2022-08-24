@@ -35,6 +35,7 @@ export default function Cart() {
       const order = {
         buyer: buyer,
         items: cartContent.cart,
+        
         total: total
       };
       const ordersColletion = collection(db, "orders");

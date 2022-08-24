@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 import NavBar from '../navBar';
 import ItemCount from './itemCount'
 import { db } from '../../db/connection';
-import { getFirestore, doc, getDoc, collection, onSnapshot, query, setProducts, snapshot } from 'firebase/firestore';
+import {doc, getDoc } from 'firebase/firestore';
 export default function ItemDetails() {
     const { id } = useParams();
     const [product, setProduct] = useState({});
     const [count, setCount] = useState(0)
-    const [img, setImg] = useState('descarga.png');
+    const [img, setImg] = useState('https://firebasestorage.googleapis.com/v0/b/solaris-ac85d.appspot.com/o/descarga.png?alt=media&token=fa6bb019-48e0-42ea-8d98-88033cb7dfa9');
     const stars = [];
     useEffect(() => {
         const query = doc(db, "items", id);
@@ -27,18 +27,18 @@ export default function ItemDetails() {
                         <div className="wrapper row">
                             <div className="preview col-md-6">
                                 <div className="preview-pic tab-content">
-                                    <div className="tab-pane active" id="pic-1"><img src={require(`../../img/${img}`)} /></div>
-                                    <div className="tab-pane" id="pic-2"><img src={require(`../../img/${img}`)} /></div>
-                                    <div className="tab-pane" id="pic-3"><img src={require(`../../img/${img}`)} /></div>
-                                    <div className="tab-pane" id="pic-4"><img src={require(`../../img/${img}`)} /></div>
-                                    <div className="tab-pane" id="pic-5"><img src={require(`../../img/${img}`)} /></div>
+                                    <div className="tab-pane active" id="pic-1"><img src={img} /></div>
+                                    <div className="tab-pane" id="pic-2"><img src={img} /></div>
+                                    <div className="tab-pane" id="pic-3"><img src={img} /></div>
+                                    <div className="tab-pane" id="pic-4"><img src={img} /></div>
+                                    <div className="tab-pane" id="pic-5"><img src={img} /></div>
                                 </div>
                                 <ul className="preview-thumbnail nav nav-tabs">
-                                    <li className="active"><a data-target="#pic-1" data-toggle="tab"><img src={require(`../../img/${img}`)} /></a></li>
-                                    <li><a data-target="#pic-2" data-toggle="tab"><img src={require(`../../img/${img}`)} /></a></li>
-                                    <li><a data-target="#pic-3" data-toggle="tab"><img src={require(`../../img/${img}`)} /></a></li>
-                                    <li><a data-target="#pic-4" data-toggle="tab"><img src={require(`../../img/${img}`)} /></a></li>
-                                    <li><a data-target="#pic-5" data-toggle="tab"><img src={require(`../../img/${img}`)} /></a></li>
+                                    <li className="active"><a data-target="#pic-1" data-toggle="tab"><img src={img} /></a></li>
+                                    <li><a data-target="#pic-2" data-toggle="tab"><img src={img} /></a></li>
+                                    <li><a data-target="#pic-3" data-toggle="tab"><img src={img} /></a></li>
+                                    <li><a data-target="#pic-4" data-toggle="tab"><img src={img} /></a></li>
+                                    <li><a data-target="#pic-5" data-toggle="tab"><img src={img} /></a></li>
                                 </ul>
 
                             </div>
@@ -57,9 +57,6 @@ export default function ItemDetails() {
                                 <p className="product-description">{product.Descripcion}</p>
                                 <h4 className="price">Precio disponible: <span>{product.Precio}</span></h4>
                                 <p className="vote"><strong>{product.Popularity}%</strong> de los compradores disfrutaron este producto! <strong>({product.Votes} votos)</strong></p>
-                                <h5 className="colors">colors:
-                                    <span className="color green not-available" data-toggle="tooltip" title="No disponible"></span>
-                                </h5>
                                 <h6 className="stock">Stock: {product.Stock}</h6>
                                 <div className="action">
                                     <ItemCount Stock={product.Stock} Item={product} Id={id} />
